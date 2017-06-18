@@ -1,6 +1,4 @@
---
-# Install and enable the zabbix agent
-
+---
   - name: Install zabbix-agent
     yum: name=zabbix-agent state=present
 
