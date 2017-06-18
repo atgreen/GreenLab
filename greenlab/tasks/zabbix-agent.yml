@@ -2,6 +2,9 @@
   - name: Install zabbix-agent
     yum: name=zabbix-agent state=present
 
+  - name: Copy config file
+    copy: src=greenlab-zabbix.conf dest=/etc/zabbix/zabbix_agentd.d/greenlab-zabbix.conf
+
   - name: Start and enable zabbix-agent
     service: name=zabbix-agent state=started enabled=yes
 
