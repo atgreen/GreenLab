@@ -4,4 +4,3 @@
   - include: motd.yml
   - include: zabbix-agent.yml
   - include: packages.yml
-  

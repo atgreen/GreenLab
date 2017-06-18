@@ -9,7 +9,6 @@
     service: name=zabbix-agent state=started enabled=yes
 
   - name: Open the zabbix agent port
-    command: firewall-cmd --add-port=10050/tcp --permanent
+    firewalld: port=10050/tcp permanent=true state=enabled
+    notify: reload firewalld
 
-  - name: Reload firewall rules
-    command: firewall-cmd --reload
