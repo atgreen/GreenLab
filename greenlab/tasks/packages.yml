@@ -16,4 +16,11 @@
     yum: pkg=katello-agent
          state=present
 
+  - name: install additional satellite packages
+    when: inventory_hostname == "satellite.atgreen.org"
+    yum: pkg={{ item }}
+         state=present
+    with_items:
+      - puppet-foreman_scap_client
+
 
