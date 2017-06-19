@@ -9,7 +9,11 @@
       - tuned
 
   - name: install katello-agent
-    when: inventory_hostname != "satellite.atgreen.org"
+    when: inventory_hostname = "satellite.atgreen.org"
+    copy: src=zabbix.repo dest=/etc/yum.repos.d/zabbix.repo
+
+  - name: install katello-agent
     yum: pkg=katello-agent
          state=present
-  
+
+
