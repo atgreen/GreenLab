@@ -1,0 +1,3 @@
+---
+- name: unmount backup filesystem
+  mount: path=/var/lib/ipa/backup state=unmounted

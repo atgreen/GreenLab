@@ -2,6 +2,8 @@
 - hosts: rhvm.atgreen.org
   roles:
   - { role: "rhvm-backup" }
+  - { role: "idm-backup" }
+  - { role: "satellite-backup" }
 
 
 
