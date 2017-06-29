@@ -4,7 +4,7 @@
   notify: unmount backup filesystem
 
 - name: test environment
-  command: bash -c env > /tmp/environment
+  shell: env > /tmp/environment
   environment:
     PASSWORD: "{{ backup_password }}"
 
