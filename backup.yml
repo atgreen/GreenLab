@@ -1,4 +1,8 @@
 ---
+- hosts: devbox.atgreen.org
+  roles:
+  - { role: "devbox-backup" }
+
 - hosts: rhvm.atgreen.org
   roles:
   - { role: "rhvm-backup" }

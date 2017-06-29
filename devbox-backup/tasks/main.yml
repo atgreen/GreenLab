@@ -1,0 +1,17 @@
+---
+- name: mount backup filesystem
+  mount: fstype=nfs path=/mnt src='192.168.1.127:/volume2/backup' state=mounted
+  notify: unmount backup filesystem
+
+- name: run duplicity backup
+  command: duplicity --full-if-older-than 2W --exclude .cache /home/green file:///mnt/backup/devbox
+  environment:
+    PASSWORD: {{ backup_password }}
+	      
+- name: clean up very old backups
+  command: duplicity remove-older-than 1Y --force file:///mnt/backup/devbox
+
+- name: clean up incremental backups
+  command: duplicity remove-all-inc-of-but-n-full 2 --force file:///mnt/backup/devbox
+
+
