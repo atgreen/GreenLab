@@ -3,20 +3,10 @@
   mount: fstype=nfs path=/mnt src='192.168.1.127:/volume2/backup' state=mounted
   notify: unmount backup filesystem
 
-- name: test environment
-  shell: env > /tmp/environment
-  environment:
-    PASSWORD: "{{ backup_password }}"
-
-- name: test environment 2
-  shell: env > /tmp/environment2
-  environment:
-    PASSWORD: "yanky doodle"
-
 - name: run duplicity backup
   command: duplicity --full-if-older-than 2W --exclude /home/green/.cache /home/green file:///mnt/backup/devbox
   environment:
-    PASSWORD: "{{ backup_password }}"
+    PASSPHRASE: "{{ backup_password }}"
       
 - name: clean up very old backups
   command: duplicity remove-older-than 1Y --force file:///mnt/devbox
