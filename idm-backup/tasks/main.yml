@@ -3,5 +3,8 @@
   mount: fstype=nfs path=/var/lib/ipa/backup src='192.168.1.127:/volume2/backup/idm' state=mounted
   notify: unmount backup filesystem
 
+- name: age out old backups
+  command: find /var/lib/ipa/backup -mtime +8 -delete
+
 - name: run ipa-backup
   command: ipa-backup
