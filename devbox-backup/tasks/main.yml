@@ -4,7 +4,7 @@
   notify: unmount backup filesystem
 
 - name: run duplicity backup
-  command: duplicity --full-if-older-than 2W --exclude /home/green/.cache /home/green file:///mnt/backup/devbox
+  command: duplicity --full-if-older-than 2W --exclude /home/green/.cache /home/green file:///mnt/devbox
   environment:
     PASSPHRASE: "{{ backup_password }}"
       
