@@ -1,0 +1,7 @@
+---
+- name: restart vdsmd
+  service:
+    name: vdsmd
+    status: restarted
+
+

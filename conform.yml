@@ -3,3 +3,6 @@
   roles:
   - { role: "greenlab" }
 
+- hosts: rhv-hosts
+  roles:
+  - { role: "rhv-hosts" }

@@ -1,0 +1,8 @@
+---
+- name: insert/update volume_utilization_chunk_mb for RHV hosts
+  blockinfile:
+    path: /etc/vdsm/vdsm.conf
+    block: |
+      [irs]
+      volume_utilization_chunk_mb = 2048
+    notify: restart vdsmd
