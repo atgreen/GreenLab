@@ -10,7 +10,11 @@
       
 - name: clean up very old backups
   command: duplicity remove-older-than 1Y --force file:///mnt/devbox
+  environment:
+    PASSPHRASE: "{{ backup_password }}"
 
 - name: clean up incremental backups
   command: duplicity remove-all-inc-of-but-n-full 2 --force file:///mnt/devbox
+  environment:
+    PASSPHRASE: "{{ backup_password }}"
 
