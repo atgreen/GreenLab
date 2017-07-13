@@ -3,11 +3,14 @@
   mount: fstype=nfs path=/mnt src='192.168.1.127:/volume2/backup' state=mounted
   notify: unmount backup filesystem
 
-- name: age out old backups
-  command: find /mnt/rhvm -mtime +8 -delete
-
+- name: create rhvm backup directory
+  file: path=/mnt/rhvm state=directory
+  
 - name: run engine-backup
   command: engine-backup --mode=backup --scope=all --file="/mnt/rhvm/engine-backup-{{ timestamp }}.tar.bz2" --log=/var/log/ovirt-engine-backups.log
+
+- name: age out old backups
+  command: find /mnt/rhvm -mtime +8 -delete
 
 
 
