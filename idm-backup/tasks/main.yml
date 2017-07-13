@@ -4,7 +4,7 @@
   notify: unmount backup filesystem
 
 - name: age out old backups
-  command: find /var/lib/ipa/backup/* -mtime +8 -delete
+  command: find /var/lib/ipa/backup -type f -mtime +8 -delete
 
 - name: run ipa-backup
   command: ipa-backup
