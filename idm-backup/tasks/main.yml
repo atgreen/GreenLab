@@ -1,6 +1,6 @@
 ---
 - name: mount backup filesystem
-  mount: fstype=nfs path=/var/lib/ipa/backup src='192.168.1.127:/volume2/backup/idm' opts=_netdev state=mounted
+  mount: fstype=nfs path=/var/lib/ipa/backup src='192.168.1.127:/volume2/backup/idm' opts=defaults,_netdev state=mounted
   notify: unmount backup filesystem
 
 - name: age out old backups
