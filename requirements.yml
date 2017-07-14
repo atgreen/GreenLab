@@ -1,0 +1,4 @@
+# Install the Red Hat Insights installer module
+- name: Red Hat Insights client
+  src: https://github.com/redhataccess/ansible-redhat-access-insights-client
+

@@ -2,6 +2,7 @@
 - hosts: all
   roles:
   - { role: "greenlab" }
+  - { role: redhataccess.redhat-access-insights-client, when: ansible_os_family == 'RedHat' }
 
 - hosts: rhv-hosts
   roles:
