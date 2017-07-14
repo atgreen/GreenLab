@@ -1,5 +1,4 @@
 # Install the Red Hat Insights installer module from Galaxy
 - name: Red Hat Insights client
-  src: redhataccess.ansible-redhat-access-insights-client
-
+  src: redhataccess.redhat-access-insights-client
 
