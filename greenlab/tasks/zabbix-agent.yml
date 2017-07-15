@@ -12,3 +12,5 @@
     firewalld: port=10050/tcp permanent=true state=enabled
     notify: reload firewalld
 
+  - name: Put the zabbix agent in permissive mode
+    selinux_permissive: name=zabbix_agent_t permissive=true
