@@ -10,6 +10,7 @@
     postfix_relayhost: "[smtp.gmail.com]:587"
     postfix_smtp_sasl_user: "{{ greenlab_gmail_user }}"
     postfix_smtp_sasl_password: "{{ greenlab_gmail_password }}"
+    postfix_mydestination: $myhostname, localhost.$mydomain, localhost
 
 - hosts: rhv-hosts
   roles:
