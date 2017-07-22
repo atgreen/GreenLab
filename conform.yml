@@ -8,8 +8,8 @@
 
   vars:
     postfix_relayhost: "[smtp.gmail.com]:587"
-    postfix_smtp_sasl_user: {{ greenlab_gmail_user }}
-    postfix_smtp_sasl_password: {{ greenlab_gmail_password }}
+    postfix_smtp_sasl_user: "{{ greenlab_gmail_user }}"
+    postfix_smtp_sasl_password: "{{ greenlab_gmail_password }}"
 
 - hosts: rhv-hosts
   roles:
