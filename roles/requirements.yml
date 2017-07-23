@@ -5,4 +5,4 @@
 - src: Stouts.postfix
 
 # Install zabbix configuration module from Galaxy
-- src: dj-wasabi.ansible-zabbix-agent
+- src: dj-wasabi.zabbix-agent
