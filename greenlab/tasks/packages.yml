@@ -1,6 +1,6 @@
 ---
   - name: install the latest versions of software
-    yum: name=* state=latest
+    yum: name=* update_cache=yes state=latest
 
   - name: install additional packages
     yum: pkg={{ item }}
