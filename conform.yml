@@ -22,7 +22,7 @@
     zabbix_useip: 1
     zabbix_create_host: present
     zabbix_host_groups:
-      - Linux Servers
+      - Linux servers
     zabbix_link_templates:
       - Template OS Linux
 
