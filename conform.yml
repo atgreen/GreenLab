@@ -15,8 +15,11 @@
     zabbix_server: 192.168.1.11
     zabbix_repo: other
     zabbix_selinux: True
+    zabbix_url: http://zabbix.atgreen.org/zabbix
     zabbix_api_user: "{{ greenlab_zabbix_api_user }}"
     zabbix_api_pass: "{{ greenlab_zabbix_api_pass }}"
+    zabbix_api_create_hosts: True
+    zabbix_useip: 1
     zabbix_create_host: present
     zabbix_host_groups:
       - Linux Servers
