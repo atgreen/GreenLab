@@ -8,6 +8,7 @@
     with_items:
       - tuned
       - policycoreutils-python
+      - python-pip
 
   - name: install katello-agent
     when: inventory_hostname == "satellite.atgreen.org"
@@ -24,4 +25,5 @@
     with_items:
       - puppet-foreman_scap_client
 
-
+  - name: pip install zabbix-api
+    pip: name=zabbix-api
