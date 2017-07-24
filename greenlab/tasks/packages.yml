@@ -1,4 +1,7 @@
 ---
+  - name: refresh subscription info
+    command: subscription-manager refresh
+
   - name: install the latest versions of software
     yum: name=* update_cache=yes state=latest
 
