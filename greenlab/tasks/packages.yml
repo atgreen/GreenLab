@@ -8,7 +8,7 @@
     with_items:
       - tuned
       - policycoreutils-python
-      - python-pip
+      - python2-pip
 
   - name: install katello-agent
     when: inventory_hostname == "satellite.atgreen.org"
