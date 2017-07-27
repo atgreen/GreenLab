@@ -13,7 +13,7 @@
       - policycoreutils-python
       - python2-pip
 
-  - name: install katello-agent
+  - name: configure the zabbix repo for the satellite host
     when: inventory_hostname == "satellite.atgreen.org"
     copy: src=zabbix.repo dest=/etc/yum.repos.d/zabbix.repo
 
@@ -30,3 +30,7 @@
 
   - name: pip install zabbix-api
     pip: name=zabbix-api
+
+  - name: Open the zabbix agent port
+    firewalld: port=10050/tcp permanent=true state=enabled
+    notify: reload firewalld
