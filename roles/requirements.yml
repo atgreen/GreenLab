@@ -4,5 +4,9 @@
 # Install a postfix configuration module from Galaxy
 - src: Stouts.postfix
 
+# Install apache httpd for zabbix server
+- src: geerlingguy.apache
+
 # Install zabbix configuration module from Galaxy
 - src: dj-wasabi.zabbix-agent
+- src: dj-wasabi.zabbix-server
