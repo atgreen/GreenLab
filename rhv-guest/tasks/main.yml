@@ -1,0 +1,7 @@
+---
+  - name: install ovirt-guest-agent
+    yum: pkg=ovirt-guest-agent-common
+         state=present
+
+  - name: Start and enable ovirt-guest-agent
+    service: name=ovirt-guest-agent state=started enabled=yes

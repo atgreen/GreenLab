@@ -28,4 +28,8 @@
 
 - hosts: rhv-hosts
   roles:
-  - { role: "rhv-hosts" }
+  - { role: "rhv-host" }
+
+- hosts: rhv-guests
+  roles:
+  - { role: "rhv-guest" }

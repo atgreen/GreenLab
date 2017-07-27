@@ -1,8 +1,0 @@
-- hosts: all
-  roles:
-  - { role: geerlingguy.apache }
-  - { role: dj-wasabi.zabbix-server, zabbix_url: zabbix.atgreen.org, database_type: pgsql, database_type_long: postgresql, zabbix_server_package: zabbix-server-pgsql }
-
-  vars:
-    zabbix_repo: other
-    zabbix_selinux: True
