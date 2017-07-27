@@ -12,7 +12,8 @@
     postfix_smtp_sasl_user: "{{ greenlab_gmail_user }}"
     postfix_smtp_sasl_password: "{{ greenlab_gmail_password }}"
     postfix_mydestination: $myhostname, localhost.$mydomain, localhost
-    zabbix_server: 192.168.1.11
+    agent_server: 192.168.1.11
+    agent_serveractive: 192.168.1.11
     zabbix_repo: other
     zabbix_selinux: True
     zabbix_url: http://zabbix.atgreen.org/zabbix
