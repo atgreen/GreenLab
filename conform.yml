@@ -34,3 +34,7 @@
 - hosts: rhv-guests
   roles:
   - { role: "rhv-guest" }
+
+- hosts: jumpbox
+  roles:
+  - { role: "jumpbox" }

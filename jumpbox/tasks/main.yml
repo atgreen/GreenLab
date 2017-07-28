@@ -1,0 +1,3 @@
+---
+  - name: install net-tools - required by sshuttle
+    yum: pkg=net-tools state=present
