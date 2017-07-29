@@ -38,11 +38,16 @@
       - rpm-build
       - sbcl
       - sqlite-devel
-      - subverion
+      - subversion
       - tcplay
       - texinfo
       - v8-devel
       - valgrind
       - xorg-x11-fonts-100dpi
       - xorg-x11-fonts-ISO8859-1-100dpi
+      - xorg-x11-fonts-ISO8859-14-100dpi
+      - xorg-x11-fonts-ISO8859-2-100dpi
+      - xorg-x11-fonts-ISO8859-9-100dpi
+      - xorg-x11-server-utils
+      - xorg-x11-xauth
       - zlib-devel
