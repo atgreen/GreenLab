@@ -1,8 +1,20 @@
 ---
+  - name: add Emacs 24.4 copr repo
+    yum_repository:
+      name: shassard-emacs
+      description: Copr repo for emacs owned by shassard
+      baseurl: https://copr-be.cloud.fedoraproject.org/results/shassard/emacs/epel-7-$basearch/
+      skip_if_unavailable: true
+      gpgcheck: yes
+      gpgkey: https://copr-be.cloud.fedoraproject.org/results/shassard/emacs/pubkey.gpg
+      repo_gpgcheck: no
+      enabled: yes
+
   - name: install additional packages
     yum: pkg={{ item }}
          state=present
     with_items:
+      - emacs
       - diffutils
       - m4
       - openssh
