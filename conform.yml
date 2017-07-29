@@ -27,7 +27,7 @@
     zabbix_link_templates:
       - Template OS Linux
 
-- hosts: rhv-hosts
+- hosts: h0.atgreen.org h1.atgreen.org h2.atgreen.org
   roles:
   - { role: "rhv-host" }
 
@@ -38,3 +38,7 @@
 - hosts: jumpbox.atgreen.org
   roles:
   - { role: "jumpbox" }
+
+- hosts: devbox.atgreen.org
+  roles:
+  - { role: "devbox" }
