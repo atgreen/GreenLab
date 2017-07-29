@@ -12,6 +12,7 @@
       - tuned
       - policycoreutils-python
       - python2-pip
+      - rear
 
   - name: configure the zabbix repo for the satellite host
     when: inventory_hostname == "satellite.atgreen.org"
