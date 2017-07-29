@@ -26,7 +26,6 @@
       - git
       - gmp-devel
       - gtkwave
-      - libidn-devel
       - libtool
       - make
       - mlocate
