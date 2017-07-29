@@ -25,7 +25,7 @@
       - gettext
       - git
       - gmp-devel
-      - gtk-wave
+      - gtkwave
       - iverilog
       - libidn-devel
       - libtool
