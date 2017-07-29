@@ -7,5 +7,4 @@
             mode=0644
 
 - name: run backup
-  serial: 1
   command: rear -d -v mkbackup
