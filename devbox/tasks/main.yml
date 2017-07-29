@@ -1,0 +1,50 @@
+---
+  - name: install additional packages
+    yum: pkg={{ item }}
+         state=present
+    with_items:
+      - diffutils
+      - m4
+      - openssh
+      - openssh-clients
+      - screen
+      - wget
+      - ant
+      - autoconf
+      - automake
+      - bison
+      - boost-devel
+      - ccache
+      - createrepo
+      - cvs
+      - dejagnu
+      - flex
+      - gcc
+      - gcc-c++
+      - gdb
+      - gettext
+      - git
+      - gmp-devel
+      - gtk-wave
+      - iverilog
+      - libidn-devel
+      - libtool
+      - make
+      - mlocate
+      - mock
+      - patch
+      - pcre-devel
+      - python-devel
+      - qt-devel
+      - readline-devel
+      - rpm-build
+      - sbcl
+      - sqlite-devel
+      - subverion
+      - tcplay
+      - texinfo
+      - v8-devel
+      - valgrind
+      - xorg-x11-fonts-100dpi
+      - xorg-x11-fonts-ISO8859-1-100dpi
+      - zlib-devel

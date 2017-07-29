@@ -6,3 +6,9 @@
       [irs]
       volume_utilization_chunk_mb = 2048
   notify: restart vdsmd
+
+- name: open port 10050 for zabbix
+  command: iptables -A INPUT -p tcp -m tcp --dport 10050 -j ACCEPT
+
+- name: save iptables changes
+  command: service iptables save

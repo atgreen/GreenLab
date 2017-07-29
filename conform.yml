@@ -35,6 +35,6 @@
   roles:
   - { role: "rhv-guest" }
 
-- hosts: jumpbox
+- host: jumpbox.atgreen.org
   roles:
   - { role: "jumpbox" }
