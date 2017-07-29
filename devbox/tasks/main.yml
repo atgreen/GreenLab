@@ -39,9 +39,7 @@
       - sbcl
       - sqlite-devel
       - subversion
-      - tcplay
       - texinfo
-      - v8-devel
       - valgrind
       - xorg-x11-fonts-100dpi
       - xorg-x11-fonts-ISO8859-1-100dpi
