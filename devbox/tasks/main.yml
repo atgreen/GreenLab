@@ -14,13 +14,6 @@
     yum: pkg={{ item }}
          state=present
     with_items:
-      - emacs
-      - diffutils
-      - m4
-      - openssh
-      - openssh-clients
-      - screen
-      - wget
       - ant
       - autoconf
       - automake
@@ -30,6 +23,9 @@
       - createrepo
       - cvs
       - dejagnu
+      - diffutils
+      - duplicity
+      - emacs
       - flex
       - gcc
       - gcc-c++
@@ -38,21 +34,28 @@
       - git
       - gmp-devel
       - gtkwave
+      - ledger
       - libtool
+      - m4
       - make
       - mlocate
       - mock
+      - openssh
+      - openssh-clients
       - patch
       - pcre-devel
       - python-devel
       - qt-devel
       - readline-devel
+      - rear
       - rpm-build
       - sbcl
+      - screen
       - sqlite-devel
       - subversion
       - texinfo
       - valgrind
+      - wget
       - xorg-x11-fonts-100dpi
       - xorg-x11-fonts-ISO8859-1-100dpi
       - xorg-x11-fonts-ISO8859-14-100dpi
