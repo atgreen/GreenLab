@@ -1,6 +1,8 @@
+# rear config file for {{ inventory_hostname }}
+
 OUTPUT=ISO
-OUTPUT_URL=nfs://192.168.1.127/volume2/backup/rear/{{ inventory_hostname }}
+OUTPUT_URL=nfs://192.168.1.127/volume2/backup/
 BACKUP=NETFS
-BACKUP_URL=nfs://192.168.1.127/volume2/backup/rear/{{ inventory_hostname }}
+BACKUP_URL=nfs://192.168.1.127/volume2/backup/
 BACKUP_PROG_EXCLUDE=("${BACKUP_PROG_EXCLUDE[@]}" '/media' '/var/tmp' '/var/crash')
 NETFS_KEEP_OLD_BACKUP_COPY=
