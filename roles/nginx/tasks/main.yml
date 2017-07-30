@@ -3,10 +3,6 @@
 # Install/run nginx
 #
 
-- name: Check/Install EPEL Repo for nginx
-  yum: name={{epel_repo}}
-      state=present
-
 - name: Install nginx, httpd-tools, httplib2, libsemanage-python
   yum: name={{ item }} state=present
   become: true
