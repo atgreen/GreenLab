@@ -42,3 +42,21 @@
 - hosts: devbox.atgreen.org
   roles:
   - { role: "devbox" }
+
+- hosts: elk.atgreen.org
+  roles:
+  - { role: elasticsearch }
+  - { role: logstash }
+  - { role: nginx }
+  - { role: kibana }
+  - { role: instructions }
+  vars:
+    nginx_kibana_port: 80
+    elk_server_ssl_cert_port: 8080
+    kibana_user: admin
+    kibana_password: admin
+    logstash_syslog_port: 5044
+    logstash_localsyslog_port: 5000
+    syslog_listen_external: true
+    es_local_port: 9200
+    es_listen_external: false
