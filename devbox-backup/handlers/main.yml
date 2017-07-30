@@ -1,3 +1,0 @@
----
-- name: unmount backup filesystem
-  mount: path=/mnt state=unmounted

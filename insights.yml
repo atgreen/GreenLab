@@ -1,5 +1,0 @@
----
-- hosts: all
-  tasks:
-  - name: Collect Acccess Insights info
-    command: /etc/redhat-access-insights/redhat-access-insights.cron

@@ -1,3 +1,0 @@
----
-# vars file for backup
-timestamp: "{{lookup('pipe','date +%Y%m%d%H%M%S')}}"
