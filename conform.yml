@@ -27,11 +27,11 @@
     zabbix_link_templates:
       - Template OS Linux
 
-- hosts: h0.atgreen.org h1.atgreen.org h2.atgreen.org
+- hosts: h[0-2].atgreen.org
   roles:
   - { role: "rhv-host" }
 
-- hosts: rhv-guests
+- hosts: all:!h[0-2].atgreen.org
   roles:
   - { role: "rhv-guest" }
 
