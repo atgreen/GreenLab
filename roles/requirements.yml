@@ -6,6 +6,3 @@
 
 # Install zabbix configuration module from Galaxy
 - src: dj-wasabi.zabbix-agent
-
-# Install the elasticsearch module from Galaxy
-- src: sadsfae.ansible-elk
