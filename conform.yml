@@ -3,7 +3,7 @@
 
   roles:
   - { role: "greenlab" }
-  - { rols: "aide-host" }
+  - { role: "aide-host" }
   - { role: redhataccess.redhat-access-insights-client, when: ansible_os_family == 'RedHat' }
   - { role: Stouts.postfix }
   - { role: dj-wasabi.zabbix-agent }
