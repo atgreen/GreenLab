@@ -1,0 +1,8 @@
+---
+#
+# Install and configure aide
+#
+
+- name: Install aide
+  yum: name=aide state=present
+  notify: create initial aide db
