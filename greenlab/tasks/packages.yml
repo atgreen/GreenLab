@@ -18,7 +18,7 @@
       - rear
       # these two are required by rear (missing dependencies
       - efibootmgr
-      - dosfsck
+      - dosfstools
 
   - name: configure the zabbix repo for the satellite host
     when: inventory_hostname == "satellite.atgreen.org"
