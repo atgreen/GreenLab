@@ -2,8 +2,11 @@
   - name: refresh subscription info
     command: subscription-manager refresh
 
+  - name: always make sure we're using the latest yum first
+    yum: name=yum update_cache=yes state=latest
+
   - name: install the latest versions of software
-    yum: name=* update_cache=yes state=latest
+    yum: name=* state=latest
 
   - name: install additional packages
     yum: pkg={{ item }}
@@ -13,6 +16,7 @@
       - policycoreutils-python
       - python2-pip
       - rear
+      - efibootmgr  ; this is required by rear (missing dependency?)
 
   - name: configure the zabbix repo for the satellite host
     when: inventory_hostname == "satellite.atgreen.org"
