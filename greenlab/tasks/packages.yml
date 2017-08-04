@@ -16,8 +16,9 @@
       - policycoreutils-python
       - python2-pip
       - rear
-      # this is required by rear (missing dependency?)
-      - efibootmgr  
+      # these two are required by rear (missing dependencies
+      - efibootmgr
+      - dosfsck
 
   - name: configure the zabbix repo for the satellite host
     when: inventory_hostname == "satellite.atgreen.org"
