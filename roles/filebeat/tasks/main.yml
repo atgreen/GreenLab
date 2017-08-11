@@ -40,6 +40,7 @@
   get_url:
     url=http://{{ elk_server }}:{{ elk_server_ssl_cert_port }}/filebeat-forwarder.crt
     dest=/etc/filebeat/filebeat-forwarder.crt
+  force: yes
   become: true
   when: (logging_backend != 'fluentd')
 
@@ -47,6 +48,7 @@
   get_url:
     url=http://{{ elk_server }}:{{ elk_server_ssl_cert_port }}/filebeat-forwarder.key
     dest=/etc/filebeat/filebeat-forwarder.key
+  force: yes
   become: true
   when: (logging_backend != 'fluentd')
 
