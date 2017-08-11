@@ -1,0 +1,45 @@
+# Foreman proxy to which reports should be uploaded
+:server: 'satellite.atgreen.org'
+:port: 9090
+
+## SSL specific options ##
+# Client CA file.
+:ca_file: '/etc/rhsm/ca/katello-server-ca.pem'
+# Client host certificate.
+:host_certificate: '/etc/pki/consumer/cert.pem'
+# Client private key
+:host_private_key: '/etc/pki/consumer/key.pem'
+
+
+# policy (key is id as in Foreman)
+
+2:
+  :profile: 'xccdf_org.ssgproject.content_profile_stig-rhel7-server-upstream'
+  # Arbitrary file name
+  :content_path: '/var/lib/openscap/content/96c2a9d5278d5da905221bbb2dc61d0ace7ee3d97f021fccac994d26296d986d.xml'
+  # Download path
+  # A path to download SCAP content from proxy
+  :download_path: '/compliance/policies/2/content'
+  :tailoring_path: ''
+  :tailoring_download_path: ''
+
+1:
+  :profile: 'xccdf_org.ssgproject.content_profile_common'
+  # Arbitrary file name
+  :content_path: '/var/lib/openscap/content/96c2a9d5278d5da905221bbb2dc61d0ace7ee3d97f021fccac994d26296d986d.xml'
+  # Download path
+  # A path to download SCAP content from proxy
+  :download_path: '/compliance/policies/1/content'
+  :tailoring_path: ''
+  :tailoring_download_path: ''
+
+3:
+  :profile: 'xccdf_org.ssgproject.content_profile_pci-dss'
+  # Arbitrary file name
+  :content_path: '/var/lib/openscap/content/96c2a9d5278d5da905221bbb2dc61d0ace7ee3d97f021fccac994d26296d986d.xml'
+  # Download path
+  # A path to download SCAP content from proxy
+  :download_path: '/compliance/policies/3/content'
+  :tailoring_path: ''
+  :tailoring_download_path: ''
+

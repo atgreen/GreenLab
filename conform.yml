@@ -36,6 +36,10 @@
   roles:
   - { role: "rhv-guest" }
 
+- hosts: all:!satellite.atgreen.org
+  roles:
+  - { role: "foreman-scap-client" }
+
 - hosts: jumpbox.atgreen.org
   roles:
   - { role: "jumpbox" }
