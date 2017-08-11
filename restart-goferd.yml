@@ -1,0 +1,7 @@
+---
+- hosts: all:!satellite.atgreen.org
+  tasks:
+  - systemd:
+      state: restarted
+      daemon_reload: yes
+      name: goferd
