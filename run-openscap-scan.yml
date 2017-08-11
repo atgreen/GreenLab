@@ -1,0 +1,5 @@
+---
+- hosts: all:!satellite.atgreen.org
+  tasks:
+  - command: /usr/bin/foreman_scap_client 2
+
