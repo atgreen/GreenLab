@@ -16,9 +16,13 @@
       - policycoreutils-python
       - python2-pip
       - rear
-      # these two are required by rear (missing dependencies
+      # these two are required by rear (missing dependencies)
       - efibootmgr
       - dosfstools
+      # these are required by postfix to talk to gmail
+      - cyrus-sasl
+      - cyrus-sasl-lib
+      - cyrus-sasl-plain
 
   - name: configure the zabbix repo for the satellite host
     when: inventory_hostname == "satellite.atgreen.org"
