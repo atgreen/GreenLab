@@ -1,8 +1,5 @@
 # Install the Red Hat Insights installer module from Galaxy
 - src: redhataccess.redhat-access-insights-client
 
-# Install a postfix configuration module from Galaxy
-- src: Stouts.postfix
-
 # Install zabbix configuration module from Galaxy
 - src: dj-wasabi.zabbix-agent
