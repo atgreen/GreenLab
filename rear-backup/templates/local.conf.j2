@@ -8,5 +8,6 @@ BACKUP_PROG_EXCLUDE=("${BACKUP_PROG_EXCLUDE[@]}" '/media' '/var/tmp' '/var/crash
 NETFS_KEEP_OLD_BACKUP_COPY=
 BACKUP_TYPE=incremental
 FULLBACKUPDAY="Mon"
-BACKUP_OPTIONS="nfsvers=4,nolock"
+BACKUP_OPTIONS="nfsvers=4,noatime"
+
 
