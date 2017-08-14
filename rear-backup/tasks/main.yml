@@ -7,4 +7,4 @@
             mode=0644
 
 - name: run backup
-  command: ionice -c2 -n7 nice -n19 rear -d -v mkbackup
+  command: ionice -c2 -n7 nice -n19 rear -D -d -v mkbackup
