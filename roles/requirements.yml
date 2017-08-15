@@ -4,10 +4,4 @@
 # Install zabbix configuration module from Galaxy
 - src: dj-wasabi.zabbix-agent
 
-# Install bacula roles from Galaxy
-- src: jtyr.postgresql
-- src: jtyr.bacula_console
-- src: jtyr.bacula_storage
-- src: jtyr.bacula_client
-- src: jtyr.bacula_director
 
