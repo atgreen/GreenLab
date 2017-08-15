@@ -116,7 +116,7 @@
             - AutoPrune = yes
         items: "{{ my_bacula_director_clients }}"
   roles:
-    - role: postgresql
+    - role: jtyr.postgresql
       tags: postgresql
     - role: jtyr.bacula_console
       tags: bacula_console
