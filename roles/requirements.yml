@@ -5,6 +5,7 @@
 - src: dj-wasabi.zabbix-agent
 
 # Install bacula roles from Galaxy
+- src: postgresql
 - src: jtyr.bacula_console
 - src: jtyr.bacula_storage
 - src: jtyr.bacula_client
