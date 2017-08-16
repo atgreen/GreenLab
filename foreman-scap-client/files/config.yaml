@@ -1,6 +1,9 @@
 # Foreman proxy to which reports should be uploaded
+# I've changed this from 9090 to 9089, using the
+# --foreman-proxy-ssl-port option in satellite-installer in order to
+# avoid conflict with cockpit.
 :server: 'satellite.atgreen.org'
-:port: 9090
+:port: 9089
 
 ## SSL specific options ##
 # Client CA file.

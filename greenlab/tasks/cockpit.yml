@@ -1,0 +1,11 @@
+---
+  - name: Install cockpit
+    yum: name=cockpit state=present
+
+  - name: Start and enable cockpit
+    service: name=cockpit state=started enabled=yes
+
+  - name: Open the cockpit port
+    firewalld: port=9090/tcp permanent=true state=enabled
+    notify: reload firewalld
+

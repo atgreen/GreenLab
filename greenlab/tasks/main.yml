@@ -3,4 +3,6 @@
 
   - include: motd.yml
   - include: packages.yml
+  - include: cockpit.yml
+  
 
