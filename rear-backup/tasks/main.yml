@@ -20,4 +20,5 @@
   file:
     path: "{{ item.path }}"
     state: absent
+  when: wildcard_dirs_to_delete is defined
   with_items: "{{ wildcard_dirs_to_delete }}"
