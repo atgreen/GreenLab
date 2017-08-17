@@ -11,10 +11,9 @@
 
 - name: find stray rear temp files to delete
   find:
-    paths: /tmp
+    paths: "/tmp"
     file_type: directory
-    patterns: "^rear.*"
-    use_regex: true
+    patterns: "rear.*"
   register: wildcard_dirs_to_delete
 
 - name: delete stray temp files
