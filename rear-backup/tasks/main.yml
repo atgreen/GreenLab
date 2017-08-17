@@ -5,8 +5,8 @@
             owner=root
             group=root
             mode=0644
--
- name: run backup
+
+- name: run backup
   command: ionice -c2 -n7 nice -n19 rear -D -d -v mkbackup
 
 - name: find stray rear temp files to delete
