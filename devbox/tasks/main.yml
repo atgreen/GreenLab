@@ -35,11 +35,13 @@
       - gmp-devel
       - gtkwave
       - ledger
+      - libmpc-devel
       - libtool
       - m4
       - make
       - mlocate
       - mock
+      - mpfr-devel
       - openssh
       - openssh-clients
       - patch
